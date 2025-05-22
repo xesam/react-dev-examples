@@ -5,7 +5,8 @@
   "type": "module",
   "customConfig": "this is a custom config in package.json",
   "scripts": {
-    "dev": "cross-env VITE_CLI_VAR='cross-env VITE_CLI_VAR=cli vite' vite",
+    "dev": "cross-env VITE_VAR_1='[cli]var_1' VITE_VAR_2='[cli]var_2' vite",
+    "dev:staging": "vite --mode staging",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

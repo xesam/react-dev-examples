@@ -6,9 +6,7 @@ import pkg from "./package.json";
 export default defineConfig({
     plugins: [react()],
     define: {
-        "import.meta.env.APP_TITLE": JSON.stringify(
-            "Vite/env + React + TypeScript"
-        ),
+        "import.meta.env.VITE_VAR_1": `"[vite.config.ts]var_1"`,
         __APP_INFO__: JSON.stringify({
             name: pkg.name,
             version: pkg.version,
