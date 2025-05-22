@@ -4,3 +4,7 @@
 
 使用 `vite` 的环境变量。
 
+```shell
+pnpm --filter example__vite-env dev
+```
+
