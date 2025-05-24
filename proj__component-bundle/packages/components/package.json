@@ -1,0 +1,44 @@
+{
+  "name": "@mono/components",
+  "version": "0.0.1",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/index.es.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/index.cjs.js"
+      }
+    },
+    "./*": {
+      "import": {
+        "types": "./dist/types/components/*/index.d.ts",
+        "default": "./dist/components/*/index.es.js"
+      },
+      "require": {
+        "types": "./dist/types/components/*/index.d.ts",
+        "default": "./dist/components/*/index.cjs.js"
+      }
+    },
+    "./*/style": "./dist/components/*/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "tsc -b && vite build"
+  },
+  "dependencies": {
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "terser": "latest"
+  }
+}
