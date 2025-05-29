@@ -19,3 +19,11 @@ pnpm i
 pnpm build
 pnpm dev:example
 ```
+
+## 示例工程 [example__markdown](example__markdown)
+渲染并显示 Markdown 文件，支持 mermaid 和 latex。
+
+```shell
+pnpm i
+pnpm --filter example__markdown  dev
+```
