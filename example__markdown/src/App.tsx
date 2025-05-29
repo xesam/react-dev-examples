@@ -1,11 +1,22 @@
 import "./App.css";
 import {MarkdownViewer} from "./MarkdownViewer.tsx";
+import root from 'react-shadow';
+import injectedCSS from 'katex/dist/katex.min.css?raw'
+
 
 function App() {
 
     return (
         <>
+            <h2>Normal Dom</h2>
+            <hr />
             <MarkdownViewer text={defaultMarkdown}/>
+            <root.div>
+                <style>{injectedCSS}</style>
+                <h2>Shadow Dom</h2>
+                <hr />
+                <MarkdownViewer text={defaultMarkdown}/>
+            </root.div>
         </>
     );
 }
