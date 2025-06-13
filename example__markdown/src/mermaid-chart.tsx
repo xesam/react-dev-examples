@@ -17,7 +17,6 @@ export default function MermaidChart({chart}: MermaidChartProps) {
             startOnLoad: false,
             theme: "default",
             securityLevel: "loose",
-            fontFamily: "inherit",
         })
     }, [])
 
